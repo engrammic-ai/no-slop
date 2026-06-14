@@ -1,0 +1,49 @@
+{
+  "name": "@engrammic/no-slop",
+  "version": "0.0.1",
+  "description": "Quality enforcement for AI coding agents - prevents shortcuts and slop",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest",
+    "check": "tsc --noEmit && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/engrammic-ai/no-slop.git"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "quality",
+    "enforcement",
+    "code-review",
+    "llm"
+  ],
+  "author": "Engrammic AI",
+  "license": "Elastic-2.0",
+  "bugs": {
+    "url": "https://github.com/engrammic-ai/no-slop/issues"
+  },
+  "homepage": "https://github.com/engrammic-ai/no-slop#readme",
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "vitest": "^1.6.0"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": ">=0.20.0"
+  },
+  "peerDependenciesMeta": {
+    "@anthropic-ai/sdk": {
+      "optional": true
+    }
+  }
+}
